@@ -9,19 +9,16 @@ var makeHashTable = function() {
       },
 
       insert: function(key, value) {
-
-        for(var i=0;i<this._storage.length;i++){
-
-          if(value=== this._storage[i]){
-                return false
+          if(_storage.indexOf(key)===-1){
+            this._storage[hashFn(key, max)] = value;
           }else{
-                this._storage[hashFn(key, max)] = value;
-               }
-
-        } 
+            return false;
+          }
+      }
+      
     }
   }
-};
+;
 
 // This is a "hashing function". You don't need to worry about it, just use it to turn any key into a pseudo-random key
 var hashFn = function(str, max) {
