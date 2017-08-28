@@ -1,17 +1,12 @@
-var Array=function(array){
-    this.array=array;
-    this.first=first
-    this.last=last
-
-}
-var first=function(){
-    return  this.array[0]
+ Array.prototype.first=function(){
+    return this[0];
+  //console.log(this[0])
   };
-var last=  function(){
-    return  this.array[ this.array.length]
+  Array.prototype.last=  function(){
+    return this[this.length-1];
   };
 
 
 
-  var myarray= new Array([1,2,3,4,5,6])
-  console.log(myarray.first())
+  var myarray= [1,2,3,4,5,6]
+console.log(myarray.first())
